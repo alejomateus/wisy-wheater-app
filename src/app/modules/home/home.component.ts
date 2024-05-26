@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { CommonsService } from '@shared/services/commons.service';
 
 @Component({
   selector: 'app-home',
@@ -6,5 +7,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent {
-
+  constructor(
+    private commonsService: CommonsService
+  ) {}
+  changeLocation(location: string) {
+    this.commonsService.navigate(`${location}`)
+  }
 }

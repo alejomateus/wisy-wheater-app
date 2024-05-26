@@ -1,7 +1,8 @@
 <div>
   <h2>Weather Forecast Options</h2>
-  <ul>
-    <li><a routerLink="/weather/LWX">District of Columbia Forecast (LWX)</a></li>
-    <li><a routerLink="/weather/TOP">Kansas Forecast (TOP)</a></li>
-  </ul>
+  <select (change)="changeLocation($event.target.value)">
+    <option>Select</option>
+    <option value="/weather/LWX">District of Columbia Forecast (LWX)</option>
+    <option value="/weather/TOP">Kansas Forecast (TOP)</option>
+  </select>
 </div>
